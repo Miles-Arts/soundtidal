@@ -1,0 +1,11 @@
+{--
+
+esto establce la musica a 135 bits
+~
+--}
+
+setcps(135/60/4)
+
+d1 $ slow 3 $ spin 4 $ sound "drum*3 tabla:4 [arpy:2 ~ arpy] [can:2 can:3]"
+
+d1 silence
