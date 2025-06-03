@@ -1,0 +1,61 @@
+{--
+
+esto establce la musica a 135 bits
+~
+d1 $ slow 3 $ spin 3 $ sound "drum*3 tabla:4 [arpy:2 ~ arpy:*4] [can:*2 can:3]"
+d1 $ slow 3 $ spin 3 $ sound "drum*3 tabla:4 [arpy:2 ~ arpy:3] [can:*2 can:3]"
+
+--}
+
+setcps(135/60/4)
+
+d1 $ sound "cpu:2"
+
+d11 $ sound "cpu:3"
+
+
+d5 $ slow 3 $ spin 3 $ sound "drum*2  tabla:4 [arpy:2 ~ arpy] [can:*2 can:*3]"
+
+d1 $ n "0 4 2 5 3 2 5 3"   # s "drum"
+
+d2 $ n "53  78"   # s "drum"
+
+d3 $ n "9 0 0  1 4 0"   # s "drum"
+
+d4 $ n "3 5 2 3 0 0 0 "   # s "drum"
+
+
+d1 $ s "tabla*3 drum2 [arpy:2 ~ arpy]"
+
+d1 $ s "tabla:1 [arpy:2 ~ arpy:3 arpy:1] drum*2 [can:2 can:3]"
+
+d1 silence
+
+hush
+
+do
+  setcps(120/240)
+  d12
+    $ s "none"
+    # td_s "0"
+
+  once
+    $ s "matsu"
+
+  do
+    d12
+      $ s "none/2"
+      # td_s "<0 1>/2"
+
+    d1
+      $ s "sfh"
+      # lpf 100
+      # pan (rand)
+      # n (choose[0..32])
+      # gain "0.8"
+      # nudge "-0.22"
+
+    d2
+      $ s "superdown/8"
+      # note "c5"
+      # voice "200"
