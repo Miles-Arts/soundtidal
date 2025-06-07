@@ -1,1 +1,15 @@
-d1 $ s "kick snare"
+setcps(135/60/4)
+
+d1 $ s "drum"
+
+d2 $ s "hh cp"
+
+d3 $ s "sd/2"
+
+d4 $ s "[drum [hh cp hh [drum drum]]]"
+
+d5 $ s "[[[[[[[[[hh]]]]]]]]]"
+
+d6 $ s "[[[[[[[[[]hh]]]]]]]]"
+
+d8 $ s "[[[[[[[[[hh]]]]]]]hh]hh]"
