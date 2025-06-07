@@ -127,10 +127,34 @@ d3 $ s "bd/3"
 
 d1 $ s "[bd sn ] *2 cp"
 
+d1 $ s "[drum:3 sn ] *2 drum:*8"
+
 d2 $ s "[bd sn ] cp/2"
 
 d3 $ s "[[bd sn] cp] *2"
 
-d5 $ s "[[bd sn] cp] *2"
+d5 $ s "[[bd sn] [cp] sn] *2"
 
-d4 $ s "[[bd sn] cp] /2"
+d9 $ s "[[bd sn] cp cp cp] /2"
+
+d1 $ s "[bd sn sn*3]/2 [bd sn*3 bd*4]/3"
+
+d2 $ s "[bd sn sn*2]/2 [bd [sn bd]/2]*3"
+
+d4 $ rev (s "bd*2 [bd [sn sn*2 sn ] sn]")
+
+d3 $ rev (s "drum*2 [bd [sn sn*2 sn ] cp]")
+
+hush
+
+d1 $ s "drum:2 cp"
+
+d2 $ rev (s "drum:2 cp")
+
+d3 $ every 4 (rev ) (  s "bd*2 [bd [sn sn*2 sn] sn]")
+
+d4 $ slow 4 $  s "bd*2 [bd [sn sn*2 sn] sn]"
+
+d5 $ fast 1 $  s "bd*2 [bd [sn*2 sn] sn drum:1 drum:9]"
+
+d6 $ slow 4 $  s " cp cp"
