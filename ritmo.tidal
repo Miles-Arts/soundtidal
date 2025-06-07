@@ -31,6 +31,8 @@ d1 $ s "tabla:1 [arpy:2 ~ arpy:3 arpy:1] drum*2 [can:2 can:3]"
 
 d1 silence
 
+d1 $ s "[7 8 6 ]6 [6 6 ]"
+
 hush
 
 do
@@ -59,3 +61,71 @@ do
       $ s "superdown/8"
       # note "c5"
       # voice "200"
+
+
+d6 $ sound "bd [sd sd]"
+
+d1 $ sound "bd [sd sd sd]"
+
+d1 $ sound "bd [sd sd sd sd]"
+
+d1 $ sound "[bd bd] [sd sd sd sd]"
+
+d1 $ sound "[bd bd bd] [sd sd]"
+
+d2 $ sound "[bd bd bd bd] [sd]"
+
+d4 $ s "[bd bd ] [bd [sd [sd sd] sd ] sd] "
+
+hush
+
+d8 $ s "[bd bd bd, sd cp sd cp] "
+
+d9 $ s "[bd bd bd, sd cp sd cp, arpy arpy, odx]"
+
+d9 $ s "[bd bd bd, [sd sd] cp, arpy [arpy [arpy arpy ] arpy apy], odx]"
+
+d1 $ s "bd <arpy:1 arpy:2 arpy:3>"
+
+hush
+
+d1 $ s "bd*3"
+
+d2 $ s "bd/2 bd/4"
+
+d1 $ s "bd*3 "
+
+d2 $  s "bd/3"
+
+hush
+
+d1 $ s "[bd sn]*2 cp"
+
+d2 $ s "[bd sn] cp/2"
+
+d3 $ s "[[bd sn] cp]*2"
+
+d7 $ s "[[bd sn ] cp ]/2"
+
+hush
+
+d1 $ s " [bd sn sn*3]/2 [bd sn*3 bd*4]/3"
+
+d2 $ s "[bd [sn sn ]*2]/2 [bd [sn bd]/2]*2"
+
+d9 $ rev (s "bd*2 [bd [sn sn*2 sn] sn cp cp]")
+
+d2 $ 
+
+
+
+
+
+
+
+
+
+
+
+
+
