@@ -115,17 +115,22 @@ d2 $ s "[bd [sn sn ]*2]/2 [bd [sn bd]/2]*2"
 
 d9 $ rev (s "bd*2 [bd [sn sn*2 sn] sn cp cp]")
 
-d2 $ 
+d2 $
 
+d1 $ s "bd*2"
 
+hush
 
+d2 $ s "bd*3"
 
+d3 $ s "bd/3"
 
+d1 $ s "[bd sn ] *2 cp"
 
+d2 $ s "[bd sn ] cp/2"
 
+d3 $ s "[[bd sn] cp] *2"
 
+d5 $ s "[[bd sn] cp] *2"
 
-
-
-
-
+d4 $ s "[[bd sn] cp] /2"
