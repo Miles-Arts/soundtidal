@@ -32,6 +32,10 @@ d1 $ s "[drum hh drum]*2 [hh:7 can:2 hh:4]*3"*2
 
 hush
 
+Adjust tempo
+
+setcps(120/120)
+
 d2
   $ slow 2
   $ s "48" # "drum cp hh"
@@ -66,3 +70,9 @@ d4
     $ "cp: sd:/5"/3
     # legato 1
     + up "[0, <3 9>]*2"*1
+
+    d5
+      $ slow 0.25
+      $ "cp: sd:/5"/3
+      # "lead"
+      + up "{0 7 10}%2"
