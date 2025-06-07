@@ -8,8 +8,61 @@ d3 $ s "sd/2"
 
 d4 $ s "[drum [hh cp hh [drum drum]]]"
 
-d5 $ s "[[[[[[[[[hh]]]]]]]]]"
+d5 $ s "[[[[[[[[[hh]]]]]]]]]*60"*2
 
 d6 $ s "[[[[[[[[[]hh]]]]]]]]"
 
-d8 $ s "[[[[[[[[[hh]]]]]]]hh]hh]"
+d8 $ s "[drum:9[[[[[[[[hh]]]]]]]hh]hh[drum:2]]*2"
+
+d8 $ s "cp [cp sd*2] cd drum:*2 drum*90"
+
+d1 $ s "drum hh cp"
+
+d2 $ s "drum hh cp*600"*2
+
+d3 $ s "drum hh cp hh hh"*4
+
+d4 $ s "[drum hh]*2 [hh [hh sd]]*1"*1
+
+d1 $ s "[drum hh drum]*2 [hh:7 can:2 hh:4]*1"*2
+
+d1 $ s "[drum hh drum]*2 [hh:7 can:2 hh:4]*2"*2
+
+d1 $ s "[drum hh drum]*2 [hh:7 can:2 hh:4]*3"*2
+
+hush
+
+d2
+  $ slow 2
+  $ s "48" # "drum cp hh"
+  + up "[0  3 7 8 10 12]*9"*5
+
+  d2
+    $ slow 1
+    $ s "48" # "drum cp hh"
+    + up "[0 3 7 8 10 12]*2"*5
+
+  d3
+    $ fast 2
+    $ s "48" # "drum cp"
+    + up "[0 7 13 17 32]*2"*4
+
+  d3
+      $ fast 1
+      $ s "48" # "drum cp"
+      + up "[0  7 8 10 18 32]*2"*2
+
+d4
+  $ slow 0.25
+  $ "drum:2 drum:4"
+  -- $ "drum:2"
+  # legato 1
+  + up "[0, <1 2>]*2"*2
+
+
+
+  d5
+    $ slow 0.25
+    $ "cp: sd:/5"/3
+    # legato 1
+    + up "[0, <3 9>]*2"*1
