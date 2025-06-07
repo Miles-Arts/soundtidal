@@ -177,8 +177,14 @@ d1 $ s "bd*2" #crush "4"
 
 d2 $ s "bd" # crush "4"  # speed "2"
 
-d1 $ s "bd*4 sn*4" # gain "[[1 0.8]*2 [0.5 0.7]]/2"
+d2 $ s "bd*4 sn*4" # gain "[[1 0.8]*2 [0.5 0.7]]/2"
 
 d3 $ s "bd*4" # gain "1 0.8 0.5 0.7"
 
 d1 $ s "bd*4" # gain (every 3 (rev) $ "1 0.8 0.5 0.7")
+
+d5 $  gain "1 0.8 0.5 0.7" # s "bd"
+
+d2 $ every 2 (|> speed  "2") $ s "arpy*4" |> speed "1"
+
+d1 $ every 1 (|> speed  "4") $ s "arpy*8" |> speed "2"
